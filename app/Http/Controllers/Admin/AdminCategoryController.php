@@ -55,7 +55,7 @@ class AdminCategoryController extends Controller
         $category->image('image', $category);
         $category->save();
 
-        return redirect()->route('admin.categories.index')->withSuccess('votre catégorie est ajoutée avec succès');
+        return redirect()->route('admin.categories.index');
 
         //
     }
@@ -97,14 +97,14 @@ class AdminCategoryController extends Controller
             'description' => 'required|min:5|max:1000'
 
         ]);
-        
+
         $category->category_name = $request->category_name;
         $category->description = $request->description;
         $category->is_active = 1;
         $category->image('image', $category);
         $category->save();
 
-        return redirect()->route('admin.categories.index')->withSecondary('votre catégorie est édité avec succès');
+        return redirect()->route('admin.categories.index');
         //
     }
 
@@ -118,7 +118,7 @@ class AdminCategoryController extends Controller
     {
         $category->delete();
 
-        return redirect()->route('admin.categories.index')->withDanger('votre catégorie est supprimée');
+        return redirect()->route('admin.categories.index');
         //
     }
 }
