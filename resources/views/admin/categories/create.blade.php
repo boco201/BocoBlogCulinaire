@@ -1,4 +1,4 @@
-@extends('admin.app')
+@extends('layouts.app')
 
 @section('title', 'Create')
 
@@ -10,14 +10,14 @@
    <div class="row">
         <div class="col-md-12">
             <div class="form-group">
-                <label for="category_name">Nom de la categorie</label>
+                <label for="category_name">Nom  la categorie</label>
                 <input type="text" name="category_name" id="category_name" class="form-control" placeholder="Ajouter une catégorie">
             </div>
         </div>
 
         <div class="col-md-12">
             <div class="form-group">
-                <label for="description">Nom de la categorie</label>
+                <label for="description">Description</label>
                 <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="facultatif"></textarea>
             </div>
         </div>
