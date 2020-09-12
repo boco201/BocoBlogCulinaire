@@ -1,9 +1,9 @@
 @extends('admin.app')
 
-@section('title', 'Blog Culinaire | Accueil')
+@section('title', 'Create')
 
 @section('content')
-<div class="container mt-4">
+
 <h1>Ajouter une catégorie</h1>
 <form method="post" action="{{ route('admin.categories.store') }}" enctype="multipart/form-data">
   @csrf
@@ -33,5 +33,5 @@
         </div>
     </div>
     </form>
-</div>
+
 @endsection

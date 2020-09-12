@@ -1,7 +1,9 @@
 @extends('admin.app')
 
+@section('title', 'edit')
+
 @section('content')
-<div class="container mt-4">
+
 	<h1 style="color:red; margin-bottom:20px;text-align:center;font-weight:bold;">Ajouter une catégories</h1>
 	<form method="post" action="{{ route('admin.categories.update', $category->id) }}" enctype="multipart/form-data">
  @csrf
@@ -46,8 +48,8 @@
 
 </div>
 </form>
-</div>
-</div>
+
+
 
 @endsection
 

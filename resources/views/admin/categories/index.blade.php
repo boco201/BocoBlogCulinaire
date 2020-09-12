@@ -1,38 +1,9 @@
 @extends('admin.app')
 
-@section('title', 'Blog Culinaire | Accueil')
+@section('title', 'accueil')
 
 @section('content')
-<div class="container mt-4">
-@if (count($errors) > 0)
-      <div class="alert alert-danger">
-      <strong>Whoops!</strong> There were some problems with your input.
-          <ul>
-             @foreach ($errors->all() as $error)
-               <li>{{ $error }}</li>
-            @endforeach
-                </ul>
-            </div>
- @endif
 
-@if (session()->has('success'))
-       <div class="alert alert-success">
-           {{ session()->get('success') }}        
-       </div>
-@endif
-
-@if (session()->has('danger'))
-       <div class="alert alert-danger">
-           {{ session()->get('danger') }}        
-       </div>
-@endif
-
-@if (session()->has('secondary'))
-       <div class="alert alert-secondary">
-           {{ session()->get('secondary') }}        
-       </div>
-@endif
-</div>
 <table class="table table-hover">
   <thead>
     <tr>
@@ -62,8 +33,8 @@
     @endforeach
   </tbody>
 </table>
-<div class="container">
+
 <p>{{ $categories->links()}}</p>
-</div>
+
 @endsection
 
