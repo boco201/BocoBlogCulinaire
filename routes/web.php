@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 //----------------------------------Route Admin Categories-------------------------------//
-Route::get('/admin', 'Admin\AdminCategoryController@index');
-Route::get('/admin/categories/create', 'Admin\AdminCategoryController@create')->name('admin.categories.create');
-Route::post('/admin/categories', 'Admin\AdminCategoryController@store')->name('admin.categories.store');
-Route::get('/admin/categories/{category}/edit', 'Admin\AdminCategoryController@edit')->name('admin.categories.edit');
-Route::patch('/admin/categories/{category}', 'Admin\AdminCategoryController@update')->name('admin.categories.update');
-Route::delete('/admin/categories/{category}', 'Admin\AdminCategoryController@destroy')->name('admin.categories.destroy');
+Route::get('/category', 'CategoryController@index')->name('admin.categories.index');
+Route::get('/category/create', 'CategoryController@create')->name('admin.categories.create');
+Route::post('/category', 'CategoryController@store')->name('admin.categories.store');
+Route::get('/category/{category}/edit', 'CategoryController@edit')->name('admin.categories.edit');
+Route::patch('/category/{category}', 'CategoryController@update')->name('admin.categories.update');
+Route::delete('/category/{category}', 'CategoryController@destroy')->name('admin.categories.destroy');
 
 
 
