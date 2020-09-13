@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 //----------------------------------Route Admin Categories-------------------------------//
-Route::get('/category', 'CategoryController@index')->name('admin.categories.index');
+Route::get('/category/index', 'CategoryController@index')->name('admin.categories.index');
 Route::get('/category/create', 'CategoryController@create')->name('admin.categories.create');
-Route::post('/category/store', 'CategoryController@store')->name('admin.categories.store');
+Route::post('/category', 'CategoryController@store')->name('admin.categories.store');
 Route::get('/category/{category}/edit', 'CategoryController@edit')->name('admin.categories.edit');
 Route::patch('/category/update/{category}', 'CategoryController@update')->name('admin.categories.update');
 Route::delete('/category/delete/{category}', 'CategoryController@destroy')->name('admin.categories.destroy');
